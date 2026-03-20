@@ -1,0 +1,5 @@
+model,quality,latency_s,energy_j,memory_mb,thermal_c,tokens_per_sec,power_w
+Qwen2.5,0.86,18.5,92.5,2100,61.2,11.42,5.0
+Llama3.2,0.81,15.96,87.78,2280,63.5,8.12,5.5
+SmolLM2,0.74,36.46,109.38,2490,66.8,4.4,3.0
+Granite3,0.83,33.34,96.69,2050,60.1,6.68,2.9
