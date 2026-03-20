@@ -1,0 +1,5 @@
+model,quality,energy_j,latency_s,L_score,pareto_optimal
+Qwen2.5,0.86,92.5,18.5,0.8760975609756098,True
+Llama3.2,0.81,87.78,15.96,1.0,True
+SmolLM2,0.74,109.38,36.46,0.0,False
+Granite3,0.83,96.69,33.34,0.15219512195121943,True

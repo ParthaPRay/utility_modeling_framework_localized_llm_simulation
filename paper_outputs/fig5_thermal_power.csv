@@ -1,0 +1,5 @@
+model,power_w,thermal_c,latency_s
+Qwen2.5,5.0,61.2,18.5
+Llama3.2,5.5,63.5,15.96
+SmolLM2,3.0,66.8,36.46
+Granite3,2.9,60.1,33.34

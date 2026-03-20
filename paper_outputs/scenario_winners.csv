@@ -1,0 +1,7 @@
+scenario,best_model,utility
+balanced,Qwen2.5,0.18984348827432185
+latency_critical,Qwen2.5,0.02547562262596842
+energy_critical,Qwen2.5,-0.002909201222270074
+quality_critical,Qwen2.5,0.48178123548309204
+memory_critical,Qwen2.5,0.03379955298648414
+thermal_critical,Qwen2.5,0.01339262299000181

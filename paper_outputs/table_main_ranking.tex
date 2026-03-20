@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Holistic ranking of candidate models under the balanced deployment regime.}
+\label{tab:main_ranking}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+model & quality & latency_s & energy_j & memory_mb & thermal_c & QEE & QLE & utility_balanced & pareto_optimal \\
+\midrule
+Qwen2.5 & 0.8600 & 18.5000 & 92.5000 & 2100 & 61.2000 & 0.0093 & 0.0465 & 0.1898 & True \\
+Llama3.2 & 0.8100 & 15.9600 & 87.7800 & 2280 & 63.5000 & 0.0092 & 0.0508 & 0.0205 & True \\
+Granite3 & 0.8300 & 33.3400 & 96.6900 & 2050 & 60.1000 & 0.0086 & 0.0249 & -0.0271 & True \\
+SmolLM2 & 0.7400 & 36.4600 & 109.3800 & 2490 & 66.8000 & 0.0068 & 0.0203 & -0.7000 & False \\
+\bottomrule
+\end{tabular}
+\end{table}
