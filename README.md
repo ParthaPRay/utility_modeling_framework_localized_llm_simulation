@@ -1,10 +1,3 @@
-Here is a **clean, professional GitHub README.md** tailored for your project, paper, and code. It is **research-grade**, well-structured, and ready for immediate use.
-
----
-
-# 📄 **README.md**
-
-```markdown
 # A Holistic Utility-Based Modeling Framework for Quality–Efficiency Trade-offs in Edge Language Models
 
 **Author:** Partha Pratim Ray  
@@ -33,26 +26,24 @@ Unlike traditional benchmarks focused solely on accuracy, this framework jointly
 
 ## 🎯 Key Contributions
 
-- **Holistic Utility Function** integrating quality and system constraints
-- **Scenario-aware model selection** (latency-critical, energy-critical, etc.)
+- **Holistic Utility Function** integrating quality and system constraints  
+- **Scenario-aware model selection** (latency-critical, energy-critical, etc.)  
 - **Composite efficiency metrics**:
   - QEE (Quality–Energy Efficiency)
   - QLE (Quality–Latency Efficiency)
   - QRE (Quality–Resource Efficiency)
-- **Pareto-optimal model analysis**
-- **Risk-sensitive utility modeling**
+- **Pareto-optimal model analysis**  
+- **Risk-sensitive utility modeling**  
 - **End-to-end evaluation pipeline with visualization + LaTeX outputs**
 
 ---
 
 ## 📂 Repository Structure
 
-```
-
 .
 ├── edge_llm_results.csv        # Input dataset
 ├── main.py                     # Core evaluation script
-├── paper_outputs/             # Generated outputs
+├── paper_outputs/              # Generated outputs
 │   ├── model_summary.csv
 │   ├── scenario_winners.csv
 │   ├── fig_*.png / .pdf
@@ -60,39 +51,27 @@ Unlike traditional benchmarks focused solely on accuracy, this framework jointly
 │   └── fig_*.csv
 └── README.md
 
-````
-
 ---
 
 ## 📊 Input Data Format
 
-The framework expects a CSV file with the following structure:
-
-```csv
 model,quality,latency_s,energy_j,memory_mb,thermal_c,tokens_per_sec,power_w
 Qwen2.5,0.86,18.5,92.5,2100,61.2,11.4,5.0
 Llama3.2,0.81,16.0,88.0,2300,63.5,8.1,5.5
 SmolLM2,0.74,36.5,109.0,2500,66.8,4.4,3.0
 Granite3,0.83,33.3,95.0,2050,60.1,6.7,2.9
-````
 
 ---
 
 ## ⚙️ Installation
 
-```bash
 pip install numpy pandas matplotlib
-```
 
 ---
 
 ## ▶️ Usage
 
-Run the evaluation pipeline:
-
-```bash
 python main.py
-```
 
 ---
 
@@ -100,20 +79,18 @@ python main.py
 
 All outputs are saved in:
 
-```
 paper_outputs/
-```
 
 ### 🔹 Tables
 
-* `model_summary.csv` → Overall ranking
-* `scenario_winners.csv` → Best model per deployment scenario
-* `table_*.tex` → LaTeX-ready tables for paper
+- model_summary.csv → Overall ranking  
+- scenario_winners.csv → Best model per deployment scenario  
+- table_*.tex → LaTeX-ready tables for paper  
 
 ### 🔹 Figures
 
 | Figure | Description                         |
-| ------ | ----------------------------------- |
+|--------|-------------------------------------|
 | Fig 1  | Holistic normalized metric profile  |
 | Fig 2  | Pareto frontier (quality vs energy) |
 | Fig 3  | Composite efficiency metrics        |
@@ -128,58 +105,25 @@ paper_outputs/
 
 ### 1. Normalization
 
-* Min–max normalization applied to all metrics
-* Cost metrics (latency, energy, memory, thermal) inverted:
-
-[
-S_{cost} = 1 - \text{normalize}(x)
-]
-
----
+Min–max normalization applied to all metrics  
+Cost metrics are inverted.
 
 ### 2. Utility Function
 
-[
-U(m) = \alpha Q - \beta L - \gamma E - \delta R - \eta T
-]
-
-Where:
-
-* (Q): Quality
-* (L): Latency
-* (E): Energy
-* (R): Memory
-* (T): Thermal
-
----
+U(m) = αQ − βL − γE − δR − ηT
 
 ### 3. Scenario-Based Evaluation
 
-Different deployment priorities:
-
-* Balanced
-* Latency-critical
-* Energy-critical
-* Quality-critical
-* Memory-critical
-* Thermal-critical
-
----
+Balanced, Latency-critical, Energy-critical, Quality-critical, Memory-critical, Thermal-critical
 
 ### 4. Pareto Optimization
 
-Models are evaluated based on:
-
-* **Benefit:** Quality ↑
-* **Costs:** Latency ↓, Energy ↓, Memory ↓, Thermal ↓
-
----
+Benefit: Quality ↑  
+Costs: Latency ↓, Energy ↓, Memory ↓, Thermal ↓  
 
 ### 5. Risk-Sensitive Utility
 
-[
-U_{risk} = U - \lambda \cdot \text{Var}(L, E, R, T)
-]
+U_risk = U − λ·Var(L, E, R, T)
 
 ---
 
@@ -187,79 +131,41 @@ U_{risk} = U - \lambda \cdot \text{Var}(L, E, R, T)
 
 ### 🔹 Best Overall Model (Balanced Scenario)
 
-**Qwen2.5**
+Qwen2.5
 
 ### 🔹 Pareto-Optimal Models
 
-* Qwen2.5
-* Llama3.2
-* Granite3
-
-### 🔹 Observations
-
-* Qwen2.5 → Best overall trade-off
-* Llama3.2 → Lowest latency
-* Granite3 → Best thermal + memory efficiency
-* SmolLM2 → Dominated across most objectives
+- Qwen2.5  
+- Llama3.2  
+- Granite3  
 
 ---
 
 ## 🔬 Research Impact
 
-This work enables:
-
-* Edge AI deployment decisions
-* Energy-aware LLM selection
-* Thermal-safe model deployment
-* Multi-objective optimization in AI systems
+- Edge AI deployment decisions  
+- Energy-aware LLM selection  
+- Thermal-safe model deployment  
+- Multi-objective optimization  
 
 ---
 
 ## 🚀 Future Work
 
-* Hardware-based power measurement validation
-* Real-time adaptive model selection
-* Integration with edge orchestration systems (e.g., Kubernetes)
-* Benchmarking across heterogeneous hardware
+- Hardware validation  
+- Adaptive model selection  
+- Kubernetes integration  
+- Cross-hardware benchmarking  
 
 ---
 
 ## 📜 License
 
-This project is intended for **academic and research use**.
-
----
-
-## 🙏 Acknowledgment
-
-Developed as part of ongoing research at **Sikkim University** in:
-
-* Edge AI
-* Efficient LLM deployment
-* Resource-aware intelligence systems
+Academic and research use.
 
 ---
 
 ## 📧 Contact
 
-**Dr. Partha Pratim Ray**
-📩 [parthapratimray1986@gmail.com](mailto:parthapratimray1986@gmail.com)
-
----
-
-⭐ If you find this work useful, please consider citing or starring the repository.
-
-```
-
----
-
-## 🔥 If you want next (very useful for your paper + GitHub impact)
-
-I can also generate:
-- ✅ **CITATION.cff file (for GitHub citation button)**
-- ✅ **Badges (stars, license, DOI, arXiv, etc.)**
-- ✅ **Short LinkedIn / GitHub project description**
-- ✅ **README with images embedded (figures auto-preview)**
-
-Just tell me 👍
-```
+Dr. Partha Pratim Ray  
+parthapratimray1986@gmail.com
