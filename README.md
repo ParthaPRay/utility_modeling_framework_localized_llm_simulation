@@ -171,5 +171,5 @@ Academic and research use.
 
 ## 📧 Contact
 
-Dr. Partha Pratim Ray  
+Partha Pratim Ray  
 parthapratimray1986@gmail.com
