@@ -41,19 +41,23 @@ Unlike traditional benchmarks focused solely on accuracy, this framework jointly
 ## 📂 Repository Structure
 
 .
+```bash
+.
 ├── edge_llm_results.csv        # Input dataset
 ├── main.py                     # Core evaluation script
 ├── paper_outputs/              # Generated outputs
 │   ├── model_summary.csv
 │   ├── scenario_winners.csv
-│   ├── fig_*.png / .pdf
-│   ├── table_*.tex
-│   └── fig_*.csv
+│   ├── fig_01.png
+│   ├── fig_02.pdf
+│   ├── table_results.tex
+│   └── fig_summary.csv
 └── README.md
-
+```
 ---
 
 ## 📊 Input Data Format
+
 
 model,quality,latency_s,energy_j,memory_mb,thermal_c,tokens_per_sec,power_w
 Qwen2.5,0.86,18.5,92.5,2100,61.2,11.4,5.0
