@@ -40,9 +40,8 @@ Unlike traditional benchmarks focused solely on accuracy, this framework jointly
 
 ## 📂 Repository Structure
 
-.
+
 ```bash
-.
 ├── edge_llm_results.csv        # Input dataset
 ├── main.py                     # Core evaluation script
 ├── paper_outputs/              # Generated outputs
@@ -59,12 +58,13 @@ Unlike traditional benchmarks focused solely on accuracy, this framework jointly
 ## 📊 Input Data Format
 
 
+```bash
 model,quality,latency_s,energy_j,memory_mb,thermal_c,tokens_per_sec,power_w
 Qwen2.5,0.86,18.5,92.5,2100,61.2,11.4,5.0
 Llama3.2,0.81,16.0,88.0,2300,63.5,8.1,5.5
 SmolLM2,0.74,36.5,109.0,2500,66.8,4.4,3.0
 Granite3,0.83,33.3,95.0,2050,60.1,6.7,2.9
-
+```
 ---
 
 ## ⚙️ Installation
